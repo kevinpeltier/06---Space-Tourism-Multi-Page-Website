@@ -1,3 +1,15 @@
+/* Global Var */
+/* Global Var */
+
+:root {
+  --hear-font-color: #fff;
+  --blue-300: #64b5f6;
+  --blue-900: #0d47a1;
+}
+
+/* Reset */
+/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +23,36 @@
   color: #fff;
 }
 
+/* body */
+/* body */
+
 body {
-  background-color: #000;
+  background-image: url(/assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* Navigation styling */
+
+nav li a {
+  font-size: 0.66rem;
+}
+
+/* Media Queries */
+/* Media Queries */
+
+/* Tablet Media's */
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url(/assets/home/background-home-desktop.jpg);
+  }
 }
