@@ -5,12 +5,25 @@
   --hear-font-color: #fff;
   --blue-300: #64b5f6;
   --blue-900: #0d47a1;
+  --nav-bgL: #0b0d17;
+
+  /* hamburger menu and animation standards */
+
+  --bar-width: 40px;
+  --bar-height: 5px;
+  --bar-gap: 5px;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--bar-gap) * 2);
+
+  /* hamburger animation standards */
+  --animation-timing: 200ms ease-in-out;
 }
 
 /* Reset */
 /* Reset */
 
-* {
+*,
+*::after,
+::before {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -36,7 +49,101 @@ body {
 
 /* Navigation styling */
 
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+/* Logo Image */
+nav img {
+  height: 48px;
+  width: 48px;
+  padding: 24px;
+  z-index: 5;
+}
+
+.common-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.ham-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--bar-gap);
+  width: max-content;
+  z-index: 5;
+  cursor: pointer;
+  padding: 50px;
+}
+
+.ham-menu::before,
+.ham-menu::after,
+.ham-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--hear-font-color);
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.ham-menu input {
+  appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.ham-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.ham-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: (var(--x-width));
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.ham-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+/* .ham-menu input:checked {
+  background-color: #0d47a1;
+} */
+
+.pop-out-nav {
+  width: 254px;
+  height: 100vh;
+  padding-top: 120px;
+  position: absolute;
+  right: 0;
+  background-color: rgba(11, 13, 25, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  padding: 0 24px;
+}
+
 nav li a {
+  font-size: 0.66rem;
+}
+
+.nav-number {
   font-size: 0.66rem;
 }
 
