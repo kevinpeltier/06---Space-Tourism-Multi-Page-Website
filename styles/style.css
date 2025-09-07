@@ -48,12 +48,22 @@
 /* body */
 /* body */
 
-body {
+.home {
   background-image: url(/assets/home/background-home-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
+  width: 100%;
+}
+
+.destination {
+  background-image: url(/assets/destination/background-destination-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 /* Navigation styling */
@@ -176,8 +186,8 @@ nav li a {
   padding-right: 1em;
 }
 
-/* Home Main */
-/* Home Main */
+/* Home Main Start*/
+/* Home Main Start*/
 
 main {
   width: 100%;
@@ -234,6 +244,21 @@ main {
   font-family: "Bellefair", serif;
   transition: all var(--animation-timing);
 }
+
+/* Home Main End */
+
+/* Destination Page Start*/
+/* Destination Page Start*/
+
+.planet-display-img img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Destination Page End */
+/* Destination Page End */
+
+
 
 /* Media Queries */
 /* Media Queries */
