@@ -29,35 +29,37 @@
       </div>
     </nav>
 
-    <main>
-      <div>
+    <main class="d-main">
+      <div class="pick">
         <span>01</span> PICK YOUR DESTINATION
       </div>
-      <div class="planet-display-img">
-        <img src="/assets/destination/image-moon.png" alt="">
+      <div class="planet-display-img" >
+        <img id="planet-img" src="/assets/destination/image-moon.png" alt="" >
       </div>
-      <div>
-        <ul>
-          <li><button>MOON</button></li>
-          <li><button>MARS</button></li>
-          <li><button>EUROPA</button></li>
-          <li><button>TITAN</button></li>
+      <div class="info-section">
+        <ul class="dest-nav">
+          <li><button class="dest-nav-btn dest-nav-btn-active" data-planet="moon">MOON</button></li>
+          <li><button class="dest-nav-btn">MARS</button></li>
+          <li><button class="dest-nav-btn">EUROPA</button></li>
+          <li><button class="dest-nav-btn">TITAN</button></li>
         </ul>
-        <div>
-          <span>MOON</span>
+        <div class="planet-naming">
+          <span id="planet-title">MOON</span>
         </div>
-        <p>
+        <p id="planet-description">
           See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
         </p>
-        <hr>
-        <div>
-          <div>
-            <span>AVG. DISTANCE</span>
-            <span>384,400 KM</span>
+        <div class="seperate">
+          <div class="line-break"> </div>
+        </div>
+        <div class="travel-info">
+          <div class="travel-sub">
+            <span class="travel-sub-title">AVG. DISTANCE</span>
+            <span id="planet-distance">384,400 KM</span>
           </div>
-          <div>
-            <span>EST. TRAVEL TIME</span>
-            <span>3 DAYS</span>
+          <div class="travel-sub">
+            <span class="travel-sub-title">EST. TRAVEL TIME</span>
+            <span id="planet-travel">3 DAYS</span>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 /* Imports */
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 
 /* Global Var */
 /* Global Var */
@@ -250,10 +251,106 @@ main {
 /* Destination Page Start*/
 /* Destination Page Start*/
 
+/* .d-main {
+  margin: 24px;
+} */
+
+.pick {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-weight: 300;
+}
+
+.pick span {
+  opacity: .25;
+}
+
+.planet-display-img {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
 .planet-display-img img {
   width: 150px;
   height: 150px;
 }
+
+.dest-nav {
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dest-nav li .dest-nav-btn {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 8px;
+  font-weight: 300;
+}
+
+.dest-nav li .dest-nav-btn-active {
+    border-bottom: 0.125rem solid var(--head-font-color);
+}
+
+.planet-naming {
+  display: flex;
+  justify-content: center;
+} 
+
+#planet-title {
+  font-size: 2.3rem;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#planet-description {
+  padding: 16px 24px 24px 24px;
+  font-size: 0.625rem;
+  line-height: 1.8;
+  /* border-bottom: 1px solid #979797; */
+}
+
+.seperate {
+  display: flex;
+  justify-content: center;
+}
+
+.line-break {
+
+  height: 1px;
+  width: calc(100% - 48px);
+  background-color: var(--link-hover);
+  border: none;
+}
+
+.travel-info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.travel-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+}
+
+.travel-sub-title {
+  font-size: .875rem;
+  font-weight: 300;
+}
+
+#planet-distance, #planet-travel {
+  font-family: "Bellefair", serif;
+  font-size: 1.75rem;
+}
+
 
 /* Destination Page End */
 /* Destination Page End */
@@ -266,8 +363,12 @@ main {
 /* Tablet Media's */
 
 @media only screen and (min-width: 768px) {
-  body {
+  .home {
     background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+
+  .destination {
+    background-image: url(/assets/destination/background-destination-tablet.jpg);
   }
 
   .ham-menu {
@@ -321,11 +422,67 @@ main {
     width: 272px;
     height: 272px;
   }
+
+  /* destination Page */
+
+  .pick {
+    padding: 0 40px;
+    padding-top: 40px;
+    justify-content: flex-start;
+  }
+
+  .planet-display-img {
+    padding: 32px ;
+  }
+
+  .planet-display-img img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .dest-nav {
+    margin: auto;
+    max-width: 514px;
+    justify-content: center;
+    gap: 2rem;
+  } 
+
+
+  #planet-title {
+    font-size: 5rem;
+  }
+
+  .info-section {
+    margin: auto;
+    max-width: 514px;
+  }
+
+  #planet-description {
+    font-size: 0.66rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .line-break  {
+    width: 100%;
+  }
+
+  .travel-info {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 0 0 0;
+  }
+
 }
 
 @media only screen and (min-width: 1100px) {
-  body {
+  .home {
     background-image: url(/assets/home/background-home-desktop.jpg);
+  }
+
+  .destination {
+    background-image: url(/assets/destination/background-destination-desktop.jpg);
   }
 
   nav {
@@ -378,6 +535,22 @@ main {
   .call-to-action-home-button:hover {
     box-shadow: 0 0 0 3.66rem rgba(255, 255, 255, 0.1);
   }
+
+    /* destination Page */
+
+
+  .pick {
+    grid-column: 1 / -1;
+    align-self: start; 
+    padding: 0 40px;
+    padding-bottom: 1rem;
+  }
+
+    .planet-display-img img {
+    height: 480px;
+    width: 480px;
+  }
+
 }
 
 /* Page animation */
